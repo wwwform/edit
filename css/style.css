@@ -1,1 +1,219 @@
+<style>
+/* Variáveis CSS */
+:root {
+  --cor-fundo: #1a1a1a;
+  --cor-texto: #fff;
+  --cor-destaque: #007bff;
+}
 
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #fff;
+  background: url('../assets/Logo GE') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Cabeçalho */
+header {
+  background-color: rgba(51, 51, 51, 0.8);
+  padding: 10px 0;
+  text-align: center;
+}
+
+h1, h2 {
+  color: var(--cor-texto);
+  margin: 0;
+}
+
+/* Navegação */
+nav {
+  background-color: rgba(68, 68, 68, 0.8);
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(85, 85, 85, 0.8);
+}
+
+/* Menu responsivo (oculto por padrão em telas maiores) */
+nav .menu-toggle {
+    display: none; /* Oculto em telas maiores */
+    cursor: pointer;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  /* Exibe o botão de menu em telas menores */
+  nav .menu-toggle {
+    display: block;
+  }
+
+  /* Oculta o menu e o exibe em formato vertical ao clicar no botão */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul.showing {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Conteúdo principal */
+main {
+  padding: 20px;
+}
+
+.content {
+  display: none; /* Oculta todo o conteúdo por padrão */
+}
+
+.content.active {
+  display: block; /* Exibe o conteúdo ativo */
+}
+
+/* Estilos para o conteúdo (textos, imagens, vídeos, etc.) */
+.content p {
+  color: #fff;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+/* Galeria de fotos e vídeos */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.moment {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.moment-item {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+}
+
+.moment-item img,
+.moment-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Rodapé */
+footer {
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute; /* Fixar o rodapé na parte inferior */
+  bottom: 0;
+  width: 100%;
+}
+
+/* Seção social */
+.social-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.social-section .photos {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.social-section .photos img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.social-section .instagram-link {
+  display: flex;
+  align-items: center;
+}
+
+.social-section .instagram-link img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Menu da Bíblia */
+#bible ul,
+#chapter-list,
+#verse-list {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+#bible li {
+  margin-bottom: 5px;
+}
+
+#bible a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Botões */
+.btn {
+  background-color: transparent ;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+/* Ocultar o menu por padrão */
+#menu {
+    display: none;
+}
+
+/* Exibir o menu quando a classe 'showing' for adicionada */
+#menu.showing {
+    display: block;
+}
+
+</style>
