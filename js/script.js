@@ -110,5 +110,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Chamar a função para carregar a Bíblia quando a página carregar
     loadBible(); 
 });
-
-</script>
